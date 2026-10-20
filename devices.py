@@ -26,6 +26,9 @@ def linux_devices():
         if len(bits) < 4:
             continue
 
+            name, size, kind, removable = bits[0], bits[1], bits[2], bits[3]
+            model = bits
+
 def mac_devices():
     pass
 
