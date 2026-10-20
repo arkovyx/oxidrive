@@ -21,6 +21,10 @@ def linux_devices():
     out = run("lsblk -dpno NAME, SIZE, TYPE, RM, MODEL 2>/dev/null")
     if not out:
         return devices
+    for line in out.splitlines():
+        bits = line.split()
+        if len(bits) < 4:
+            continue
 
 def mac_devices():
     pass
