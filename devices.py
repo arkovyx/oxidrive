@@ -4,7 +4,7 @@ import platform
 from ui import say, cyan, red, yellow, dim, bold, green, reset
 from helpers import run
 
-system = None
+
 def get_devices(system):
     if system == "Linux":
         return linux_devices()
