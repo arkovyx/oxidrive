@@ -17,7 +17,10 @@ def get_devices(system):
         return []
 
 def linux_devices():
-    pass
+    devices = []
+    out = run("lsblk -dpno NAME, SIZE, TYPE, RM, MODEL 2>/dev/null")
+    if not out:
+        return devices
 
 def mac_devices():
     pass
